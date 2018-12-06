@@ -59,8 +59,7 @@ class MotorbikeController extends Controller
                 'admin_id' => $admin->id,
             ]);
             session()->flash('msg', ['notification' => 'موتورسیکلت جدید با موفقیت درج شد', 'notification_type'=>'success']);
-        return $motorbike;
-                return redirect()->route('pubmotorbike.show', ['model' => $motorbike->model]);
+            return redirect()->route('pubmotorbike.show', ['model' => $motorbike->model]);
 
         }catch(\Exception $e){
             session()->flash('msg', ['notification' => 'بروز خطا در اجرای عملیات. لطفا مجددا سعی کنید', 'notification_type'=>'error']);

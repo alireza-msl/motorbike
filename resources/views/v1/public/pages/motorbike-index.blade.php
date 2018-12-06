@@ -13,12 +13,12 @@
         </tr>
         @foreach($motorbikes as $row)
             <tr>
-                <td>$loop->index+1</td>
-                <td>$row->admin->name</td>
-                <td>$row->model</td>
-                <td>$row->color</td>
-                <td>$row->weight</td>
-                <td>$row->price</td>
+                <td>{{$loop->index+1}}</td>
+                <td>{{$row->admin->name}}</td>
+                <td>{{$row->model}}</td>
+                <td>{{$row->color}}</td>
+                <td>{{$row->weight}}</td>
+                <td>{{$row->price}}</td>
                 <td>
                     <span><a href="{{route('pubmotorbike.show', $row->model)}}">نمایش</a></span>
                 </td>
